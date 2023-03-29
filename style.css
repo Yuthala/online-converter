@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h5, label {
+    text-align: center;
+}
+
+h1 {
+    color: darkorange;
+}
+h5 {
+    font-weight: normal;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+    flex-basis: 10%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    height: 30px;
+    border-radius: 8px;
+}
