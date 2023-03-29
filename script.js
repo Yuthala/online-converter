@@ -18,8 +18,8 @@ inputRub.addEventListener('input', () => {
             inputUsd.value = Number(inputRub.value /  dataUSD).toFixed(2);
             inputEur.value = Number(inputRub.value /  dataEUR).toFixed(2);
         } else {
-            inputUsd.value = "Что-то пошло не так";
-            inputEur.value = "Что-то пошло не так";
+            inputUsd.value = "something's wrong...";
+            inputEur.value = "something's wrong...";
         }
     });
 })
