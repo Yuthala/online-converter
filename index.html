@@ -7,17 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Online converter</title>
 </head>
 <body>
-    <h1>Конвертер RUB/USD онлайн</h1>
-    <h5>По данным официального сайта ЦБ РФ. Обновляется ежедневно.</h5>
+    <h1>Online Currency Converter</h1>
+    <h5>Official CBR website data. Auto-refreshed daily.</h5>
     <div class="block">
-        <label for="rub">Введите сумму в рублях</label>
+        <label for="rub">Enter amount in RUB</label>
         <input type="text" id="rub" autofocus>
         <label for="usd">в USD это</label>
         <input type="text" id="usd">
+        <label for="usd">в евро это</label>
+        <input type="text" id="eur">
     </div>
     <a href="https://www.cbr-xml-daily.ru/">Курсы ЦБ РФ в XML и JSON, API</a>
     <script src="script.js"></script>

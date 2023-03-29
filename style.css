@@ -18,7 +18,7 @@ h5 {
     row-gap: 20px;
     align-items: center;
     margin: 30px auto 70px;
-    flex-basis: 10%;
+    flex-basis: 5%;
 }
 
 label {
@@ -29,6 +29,10 @@ label {
 input {
     height: 30px;
     border-radius: 8px;
+    background-color: black;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Russo One';
 }
 
 a {

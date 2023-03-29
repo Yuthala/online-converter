@@ -1,5 +1,6 @@
 let inputRub = document.getElementById('rub'),
-    inputUsd = document.getElementById('usd');
+    inputUsd = document.getElementById('usd'),
+    inputEur = document.getElementById('eur');
 
 inputRub.addEventListener('input', () => {
     let request = new XMLHttpRequest(); //создаем новый объект для работы с сетевыми запросами
@@ -9,13 +10,16 @@ inputRub.addEventListener('input', () => {
 
     request.send(); //тело запроса
 
-    request.addEventListener('readystatechange', function() {
+    request.addEventListener('readystatechange', () => {
         if(request.readyState === 4 && request.status == 200) { //статус нашего запроса = 4 (DONE) и статус сервера 200 (OPEN)
-            let data = JSON.parse(request.response).Valute.USD.Value.toFixed(2); //сохраняем в переменную data данные, полученные от сервера
-
-            inputUsd.value = inputRub.value /  data;
+             //сохраняем в переменную data данные, полученные от сервера
+            let dataUSD = JSON.parse(request.response).Valute.USD.Value;//USD
+            let dataEUR = JSON.parse(request.response).Valute.EUR.Value;//EUR
+            inputUsd.value = Number(inputRub.value /  dataUSD).toFixed(2);
+            inputEur.value = Number(inputRub.value /  dataEUR).toFixed(2);
         } else {
             inputUsd.value = "Что-то пошло не так";
+            inputEur.value = "Что-то пошло не так";
         }
     });
 })
