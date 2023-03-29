@@ -18,7 +18,7 @@ Number 3. Send 'body' of the request. Since we send GET request the 'body' of th
 
 ![image](https://user-images.githubusercontent.com/113363158/228620307-f11cb927-1806-4926-9452-a56f9df95ed0.png)
 
-If request status is "DONE" (equals 4) and server status is 200 "OK", then we parse JSON file form the server into JavaScript object, using .notation for nested elements:
+After sending XMLHttpRequest the code monitors request state change. If the request status is "DONE" (equals 4) and server status is 200 "OK", then we parse JSON file form the server into JavaScript object, using .notation for nested elements:
 
 ![image](https://user-images.githubusercontent.com/113363158/228621397-a4f86da7-bfa1-46dd-a426-7e6ce2b46bd2.png)
 
@@ -32,9 +32,11 @@ The following 2 lines make conversion calculations from Rubles to USD and EUR an
 
 -----
 As you can see there are no buttons on a webpage. Conversion works with AJAX. 
-The code starts working when a user enters anything in inputRub filed:
+The code starts working when a user enters anything in inputRub field (event - input):
 
 ![image](https://user-images.githubusercontent.com/113363158/228623631-5dee6580-0f7c-4b98-adf8-2658789a127c.png)
+
+For better user performance field validation can be added. I skipped this step in order to keep things simple.
 
 
 
